@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/back"
+        app:showAsAction="always"
+        android:icon="@drawable/arrow_back"
+        android:iconTint="@color/white"
+        android:title="back"
+        />
+
+
+    <item
+        android:id="@+id/whitePen"
+        app:showAsAction="always"
+        android:icon="@drawable/brush_black"
+        android:title="white_pen"/>
+
+
+    <item
+        android:id="@+id/redPen"
+        app:showAsAction="always"
+        android:icon="@drawable/brush_red"
+        android:title="redPen"/>
+    <item
+        android:id="@+id/bluePen"
+        app:showAsAction="always"
+        android:icon="@drawable/brush_blue"
+        android:title="bluePen"/>
+    <item
+        android:id="@+id/yellowPen"
+        app:showAsAction="always"
+        android:icon="@drawable/brush_yellow"
+        android:title="yellowPen"/>
+
+    <item
+        android:id="@+id/eraser"
+        app:showAsAction="always"
+        android:icon="@drawable/eraser"
+        android:iconTint="@color/white"
+        android:title="Eraser"/>
+
+    <item
+        android:id="@+id/clear"
+        app:showAsAction="always"
+        android:icon="@drawable/delete"
+        android:iconTint="@color/white"
+        android:title="Clear"/>
+
+</menu>

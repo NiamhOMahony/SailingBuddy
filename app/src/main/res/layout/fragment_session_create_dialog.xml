@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="SessionCRUD.CreateSession.SessionCreateDialogFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorIcon" />
+
+            <ImageView
+                android:id="@+id/createImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorIcon" />
+
+            <TextView
+                android:id="@+id/TitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Session Plan"
+                android:textSize="24dp"
+                android:textColor="@color/primary_dark_color"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backImageView" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backImageView" />
+
+            <View
+                android:id="@+id/typeIndicatorView"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_type_indicator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/levelSpinner"
+                app:layout_constraintTop_toBottomOf="@id/TitleTextView" />
+
+
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_spinner"
+                android:hint="Instructor Name"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/typeIndicatorView"
+                app:layout_constraintTop_toBottomOf="@+id/TitleTextView" />
+
+            <Spinner
+                android:id="@+id/levelSpinner"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:background="@drawable/background_spinner"
+                android:hint="Level"
+                android:entries="@array/levels"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+
+            <EditText
+                android:id="@+id/noStudentsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_spinner"
+                android:drawableLeft="@drawable/people"
+                android:drawablePadding="5dp"
+                android:hint="No. Participants"
+                android:inputType="number"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.546"
+                app:layout_constraintStart_toEndOf="@id/levelSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+            <EditText
+                android:id="@+id/landEditText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableTop="@drawable/land"
+                android:background="@drawable/background_spinner"
+                android:hint="Land Activity"
+                android:inputType="textMultiLine"
+                android:paddingTop="10dp"
+                android:gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noStudentsEditText" />
+
+            <EditText
+                android:id="@+id/waterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableTop="@drawable/water"
+                android:background="@drawable/background_spinner"
+                android:hint="Water Activity"
+                android:inputType="textMultiLine"
+                android:paddingTop="10dp"
+                android:gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/landEditText" />
+
+            <EditText
+                android:id="@+id/areaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="5dp"
+                android:background="@drawable/background_spinner"
+                android:hint="Sail Area"
+                android:inputType="textCapSentences"
+                android:paddingTop="10dp"
+                android:gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/waterEditText" />
+
+            <TextView
+                android:id="@+id/highTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:drawableLeft="@drawable/high"
+                android:drawablePadding="5dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="High Tide"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/areaEditText" />
+
+            <TextView
+                android:id="@+id/highEditText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center"
+                android:hint="00:00"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/highTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/areaEditText" />
+
+            <TextView
+                android:id="@+id/launchTextView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:drawableLeft="@drawable/launch"
+                android:drawablePadding="5dp"
+                android:text="Launch Time:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/highEditText"
+                app:layout_constraintTop_toBottomOf="@id/areaEditText" />
+
+            <TextView
+                android:id="@+id/launchEditText"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center"
+                android:hint="00:00"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/launchTextView"
+                app:layout_constraintTop_toBottomOf="@+id/areaEditText" />
+
+            <TextView
+                android:id="@+id/lowTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:drawableLeft="@drawable/low"
+                android:drawablePadding="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp"
+                android:text="Low Tide"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/highTitleTextView" />
+
+            <TextView
+                android:id="@+id/lowEditText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center"
+                android:hint="00:00"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/highTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/highEditText" />
+
+            <TextView
+                android:id="@+id/recoveryTextView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="55dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:drawableLeft="@drawable/recovery"
+                android:drawablePadding="5dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Recovery Time:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/lowEditText"
+                app:layout_constraintTop_toBottomOf="@id/areaEditText" />
+
+            <TextView
+                android:id="@+id/recoveryEditText"
+                android:layout_marginTop="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center"
+                android:hint="00:00"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/recoveryTextView"
+                app:layout_constraintTop_toBottomOf="@+id/areaEditText" />
+
+            <EditText
+                android:id="@+id/weatherEditText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_spinner"
+                android:drawableTop="@drawable/sun"
+                android:gravity="top"
+                android:hint="Weather"
+                android:paddingTop="10dp"
+                android:inputType="textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lowTitleTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

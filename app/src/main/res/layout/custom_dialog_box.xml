@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/primary_light_color">
+
+    <Button
+        android:id="@+id/btnChoosePath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:background="@drawable/background_spinner"
+        android:backgroundTint="@color/secondary_color"
+        android:text="From Gallery"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btnChoosePath"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:background="@drawable/background_spinner"
+        android:text="Take Photo"
+        android:textColor="@color/black"
+       />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTakePhoto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:width="200dp"
+        android:background="@drawable/background_spinner"
+        android:text="Exit"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sessionHolder"
+    android:layout_width="580dp"
+    android:layout_height="300dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/background_item"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/instructorNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/instructors_name"
+        android:textColor="@color/colorTextHint"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableLeftCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="195dp"
+        android:text="@string/date"
+        android:textColor="@color/colorTextHint"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/instructorNameTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/levelTitileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/instructorNameTextView"
+        android:text="@string/leveltitle"
+        app:drawableStartCompat="@drawable/level" />
+
+    <TextView
+        android:id="@+id/levelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/levelTitileTextView"
+        app:layout_constraintTop_toBottomOf="@id/instructorNameTextView"
+        android:text="@string/advanced_boat_handling" />
+
+    <TextView
+        android:id="@+id/noStudentsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/levelTextView"
+        android:text="@string/number_of_participants"
+        app:drawableLeftCompat="@drawable/people" />
+
+    <TextView
+        android:id="@+id/noStudentsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/noStudentsTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/levelTextView"
+        android:text="@string/particpntNo" />
+    <TextView
+        android:id="@+id/landTitleTextView"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        android:drawablePadding="5dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noStudentsTextView"
+        android:text="@string/land_activity"
+        app:drawableStartCompat="@drawable/land" />
+
+    <TextView
+        android:id="@+id/landTextView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/landTitleTextView"
+        android:text="@string/land_activity_description" />
+
+    <TextView
+        android:id="@+id/waterTitleTextView"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/landTextView"
+        android:text="@string/water_activity"
+        android:drawablePadding="5dp"
+        app:drawableLeftCompat="@drawable/water" />
+
+    <TextView
+        android:id="@+id/waterTextView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterTitleTextView"
+        android:text="@string/water_activity_description" />
+
+    <TextView
+        android:id="@+id/areaTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterTextView"
+        android:text="@string/sail_area"
+        app:drawableLeftCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/areaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/areaTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/waterTextView"
+        android:text="@string/sailAreaLocation" />
+
+    <TextView
+        android:id="@+id/highTitleTextView"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@id/highTextView"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
+        android:text="@string/high_tide"
+        app:drawableLeftCompat="@drawable/high" />
+
+    <TextView
+        android:id="@+id/highTextView"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@id/lowTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
+        android:text="@string/time" />
+
+    <TextView
+        android:id="@+id/lowTitleTextView"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@id/lowTextView"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
+        android:text="@string/low_tide"
+        app:drawableLeftCompat="@drawable/low" />
+
+    <TextView
+        android:id="@+id/lowTextView"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
+        android:text="@string/time" />
+
+    <TextView
+        android:id="@+id/launchTitleTextView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="5dp"
+        android:text="@string/launch"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/launchTextView"
+        app:layout_constraintTop_toBottomOf="@id/highTitleTextView"
+        app:drawableLeftCompat="@drawable/launch" />
+
+    <TextView
+        android:id="@+id/launchTextView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/time"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lowTitleTextView" />
+
+    <TextView
+        android:id="@+id/recoveryTitleTextView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="5dp"
+        android:text="@string/recovery"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/recoveryTextView"
+        app:layout_constraintTop_toBottomOf="@id/launchTextView"
+        app:drawableLeftCompat="@drawable/recovery" />
+
+    <TextView
+        android:id="@+id/recoveryTextView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/time"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launchTextView" />
+
+    <TextView
+        android:id="@+id/weatherTitleTextView"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/weatherTitle"
+        android:drawablePadding="5dp"
+        android:textColor="@color/colorTextHint"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recoveryTextView"
+        app:drawableLeftCompat="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/weatherTextView"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/weather_description"
+        android:textColor="@color/colorTextHint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weatherTitleTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

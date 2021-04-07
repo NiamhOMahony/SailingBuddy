@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.niamh.sailingbuddy">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />"
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SailingBuddy">
+        <activity android:name=".UserCRUD.UpdateUserPasswordActivity"></activity>
+        <activity android:name=".UserCRUD.ShowUserList.UserListActivity2" />
+        <activity
+            android:name=".UserCRUD.ShowUserList.UserListActivity"
+            android:label="@string/title_activity_user_list"
+            android:theme="@style/Theme.SailingBuddy.NoActionBar" />
+        <activity android:name=".NoteCRUD.ShowNoteList.NotesListActivity" />
+        <activity
+            android:name=".Paint.PaintActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity android:name=".SessionCRUD.ShowSessionList.SessionListActivity2" />
+        <activity android:name=".SessionCRUD.ShowSessionList.SessionListActivity" />
+        <activity android:name=".UserCRUD.UpdateUserActivity" />
+        <activity android:name=".UserCRUD.ProfileActivity" />
+        <activity android:name=".Calendar.CalendarActivity" />
+        <activity android:name=".SafetyCRUD.ShowSafetyList.SafetyListActivity2" />
+        <activity android:name=".SailingCRUD.ShowSailingList.SailingListActivity2" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".SafetyCRUD.ShowSafetyList.SafetyListActivity" />
+        <activity android:name=".SailingCRUD.ShowSailingList.SailingListActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".Weather.FindCity" />
+        <activity android:name=".UserCRUD.RegisterActivity" />
+        <activity android:name=".UserCRUD.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

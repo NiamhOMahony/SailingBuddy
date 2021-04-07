@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SailingCRUD.UpdateSailing.SailingUpdateDialogFragment2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorIcon" />
+
+            <ImageView
+                android:id="@+id/createImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorIcon" />
+
+
+            <TextView
+                android:id="@+id/TitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/edit_my_profile"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backImageView" />
+
+            <View
+                android:id="@+id/typeIndicatorView"
+                android:layout_width="7dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_type_indicator"
+                app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TitleTextView" />
+
+            <EditText
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_spinner"
+                android:hint= "@string/my_name"
+                android:autofillHints = "@string/my_name"
+                android:inputType="textCapWords"
+                android:textSize="18sp"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/typeIndicatorView"
+                app:layout_constraintTop_toBottomOf="@+id/TitleTextView"/>
+
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_spinner"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="10dp"
+                android:hint="@string/emailTitle"
+                android:autofillHints="@string/emailTitle"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_spinner"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:autofillHints="@string/mobile_no"
+                android:hint="@string/mobile_no"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+            <TextView
+                android:id="@+id/admin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/user_type"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneEditText"
+                app:drawableLeftCompat="@drawable/all" />
+
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_spinner"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:hint="@string/admin_instructor"
+                app:layout_constraintStart_toEndOf="@+id/admin"
+                app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+
+
+            <ImageView
+                android:id="@+id/userImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/add_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeTextView" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
